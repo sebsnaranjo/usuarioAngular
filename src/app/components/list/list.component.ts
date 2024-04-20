@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { UserData } from 'src/app/interfaces/user.interface';
 import { TasksService } from 'src/app/services/tasks.service';
 import Swal from 'sweetalert2';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-list',
