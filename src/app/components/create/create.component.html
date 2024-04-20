@@ -1,1 +1,57 @@
-<p>create works!</p>
+<div class="container">
+    <div class="toolbar-wrapper">
+        <mat-toolbar>
+            <span class="toolbar-text">Crear usuario</span>
+        </mat-toolbar>
+    </div>
+    <mat-card>
+        <form [formGroup]="form" (ngSubmit)="addUser()">
+            <mat-grid-list cols="4" rowHeight="70px">
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field class="espacio">
+                        <mat-label>Ingrese el primer nombre</mat-label>
+                        <input matInput formControlName="primer_nombre">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="3" [rowspan]="5">
+                    <img class="logo" src="./assets/crear.jpeg">
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field class="espacio">
+                        <mat-label>Ingrese el segundo nombre</mat-label>
+                        <input matInput formControlName="segundo_nombre">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field class="espacio">
+                        <mat-label>Ingrese el primer apellido</mat-label>
+                        <input matInput formControlName="primer_apellido">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field class="espacio">
+                        <mat-label>Ingrese el segundo apellido</mat-label>
+                        <input matInput formControlName="segundo_apellido">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field class="espacio">
+                        <mat-label>Ingrese la fecha de nacimiento</mat-label>
+                        <input matInput [matDatepicker]="picker" formControlName="fecha_nacimiento">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field class="espacio">
+                        <mat-label>Ingrese el sueldo</mat-label>
+                        <input matInput formControlName="sueldo">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <button type="submit" [disabled]="form.invalid" mat-raised-button color="primary">Aceptar</button>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </form>
+    </mat-card>
+</div>

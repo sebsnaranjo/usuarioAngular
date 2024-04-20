@@ -1,0 +1,29 @@
+.pointer {
+  cursor: pointer;
+}
+
+.example-spacer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.example-spacer button {
+  flex-shrink: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+mat-table,
+mat-paginator {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.custom-form-field {
+  width: 100%;
+}
