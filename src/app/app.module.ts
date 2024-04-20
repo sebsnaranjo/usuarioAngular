@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ListComponent } from './components/list/list.component';
 import { EditComponent } from './components/edit/edit.component';
 import { CreateComponent } from './components/create/create.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CreateComponent } from './components/create/create.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
